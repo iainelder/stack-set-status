@@ -23,6 +23,7 @@ REASON_MAP: ReasonMap = {
     "SSM parameter on advanced tier": r"ResourceLogicalId:(.*?), ResourceType:AWS::SSM::Parameter, ResourceStatusReason:This parameter uses the advanced-parameter tier. You can't downgrade a parameter from the advanced-parameter tier to the standard-parameter tier. If necessary, you can delete the advanced parameter and recreate it as a standard parameter. Be aware that standard parameters have a value limit of 4096 characters. \(Service: AmazonSSM; Status Code: 400; Error Code: ValidationException; Request ID: (.*?); Proxy: (.*?)\)\.",
     "Invalid principal in key policy": r'ResourceLogicalId:(.*?), ResourceType:AWS::KMS::Key, ResourceStatusReason:Resource handler returned message: "Policy contains a statement with one or more invalid principals. \(Service: Kms, Status Code: 400, Request ID: (.*?)\)" \(RequestToken: (.*?), HandlerErrorCode: InvalidRequest\).',
     "SLR exists with different description": r"ResourceLogicalId:(.*?), ResourceType:AWS::IAM::ServiceLinkedRole, ResourceStatusReason:SLR \[(.*?)\] already exists but has a different description: \[(.*?)\]\. Please verify your SLR use case\. If you are sure the use case is correct please modify your CloudFormation template and keep SLR description consistent\.\.",
+    "AWS Access Key Id needs subscription for service": r"^The AWS Access Key Id needs a subscription for the service \(Service: AmazonCloudFormation; Status Code: 403; Error Code: OptInRequired; Request ID: (.*?); Proxy: null\)$",
 }
 
 
